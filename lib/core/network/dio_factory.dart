@@ -18,7 +18,7 @@ Dio apiDioFactory() {
 class AuthInterceptors extends Interceptor {
   @override
   onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    String token = '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';
+    String token = '';
     options.headers
         .putIfAbsent(HttpHeaders.authorizationHeader, () => "Bearer $token");
     return super.onRequest(options, handler);
